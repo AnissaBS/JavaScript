@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Débuts JavaScript</title>
+</head>
+<body>
+
+    <h1><u>Premiers tests en JavaScript :</u></h1>
+    
+    <!-- Je crée mon commentaire : DECOMMENTER POUR VOIR LES REACTIONS -->
+
+
+    <!-- <script>
+
+
+        // var x= 1; //affectation d'une valeur numérique
+        // var y = "a"; // affectation d'une chaîne de caractères
+        // var z = 5;
+        // alert(x); //Affiche x
+        // alert(y); //Affiche y
+        // alert(z); //Affiche z
+        // alert(x+z); // Les deux valeurs numériques s'additionnent automatiquement
+        // alert(x+y); // Une valeur numérique et une chaîne de caractères ne peuvent pas s'additionner
+        // alert(y+x+z); // Résultat 
+
+        var nom = prompt("Entrez votre nom");
+        alert("Voici le nom que vous avez entré : "+ nom);
+
+        document.write("Voici le nom que vous avez entré : "+ nom)
+
+        console.log("Voici le nom que vous avez entré : "+ nom) // Affiche dans la console > dans "inspecter" > clique droit sur la page web
+
+    </script> -->
+
+
+    <script>
+
+        console.log(6*5);
+        console.log(10+2*(5+1));
+        console.log(1/3)
+        console.log(3*.3);
+        // alert(6*5); // Affiche dans la valeur dans une fenêtre
+        // document.write(5*6); // Affiche la valeur dans la page web
+        console.log(Math.cos(3.14));
+        // alert(Math.cos(3.14)); // Calculer le cosinus
+        // document.write(Math.cos(3.14));
+        console.log("Le sinus de 10 est :"+ Math.sin(10)); // Calculer le sinus
+        // alert("Le sinus de 10 est :"+ Math.sin(10))
+        // document.write("Le sinus de 10 est :"+ Math.sin(10));
+        console.log(Math.random()); // Afficher un nombre au hasard à chaque rechargement de la page
+        console.log(Math.pow(2,3)); // Calculer la puissance (2^3)
+
+        console.log("bon" + "jour");
+
+
+        // Exercice 1 :
+
+        var Français = Number (prompt("Entrez la note pour la matière de Français"));
+        alert("Voici la note que vous avez entré : "+ Français);
+        document.write("Français : "+ Français);
+
+        var Maths = Number (prompt("Entrez la note pour la matière de Maths"));
+        alert("Voici la note que vous avez entré : "+ Maths);
+        document.write("Maths : "+ Maths); 
+
+        var Anglais = Number (prompt("Entrez la note pour la matière de Anglais"));
+        alert("Voici la note que vous avez entré : "+ Anglais);
+        document.write("Anglais : "+ Anglais);
+
+        console.log((Français+Maths+Anglais)/3);
+        alert("Voici la moyenne :" + (Français+Maths+Anglais)/3);
+        document.write("Voici la moyenne :" +(Français+Maths+Anglais)/3);
+
+    </script>
+
+
+</body>
+</html>
