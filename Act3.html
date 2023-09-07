@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        alert("Exercice 3 :");
+
+        let ht = Number (prompt("Entrez le prix HT :"));
+        alert("Voici le prix indiqué : " + ht + "€");
+        document.write("Prix HT : "  + ht + "€");
+
+        let taxe = Number (prompt("Entrez le taux de la TVA :"));
+        alert("Voici le taux indiqué : " + ht + "€");
+        document.write("Prix HT : "  + taxe + "%");
+
+        let ttc = Number ((ht+(ht*taxe)/100));
+        console.log(ttc);
+        document.write("Voici le prix TTC : " + ttc + "€");
+
+        var resultatElement = document.body;
+
+        if (ttc > 100){
+            resultatElement.innerHTML += '<h2 style="color: red;">Le prix TTC est : ' + ttc.toFixed(2) + ' €</h2>';
+        }
+        else{
+            resultatElement.innerHTML += '<h2 style="color: green;">Le prix TTC est : ' + ttc.toFixed(2) + ' €</h2>';
+        }
+
+    </script>
+
+
+</body>
+</html>

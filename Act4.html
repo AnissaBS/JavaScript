@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+    const numeroJour = parseInt(prompt("Entrez un nombre (1 pour lundi, 2 pour mardi, etc.) :"));
+
+    let jourSemaine;
+
+    switch (numeroJour){
+    case 1:
+        jourSemaine = "Lundi";
+    break;
+
+    case 2:
+        jourSemaine = "Mardi";
+    break;
+
+    case 3:
+        jourSemaine = "Mercredi";
+        break;
+
+    case 4:
+        jourSemaine = "Jeudi";
+        break;
+
+    case 5:
+        jourSemaine = "Vendredi";
+        break;
+
+    case 6:
+        jourSemaine = "Samedi";
+    break;
+
+    case 7:
+        jourSemaine = "Dimanche";
+    break;
+
+    default:
+    jourSemaine = "Jour invalide";
+    }
+
+    alert(`Le jour correspondant est : ${jourSemaine}`);
+
+</script>
+
+
+</body>
+</html>

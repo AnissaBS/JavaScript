@@ -1,10 +1,10 @@
 alert("Exercice 4 :")
 
-var budget = Number (prompt("Entrez à combien s'élève votre budget"));
+let budget = Number (prompt("Entrez à combien s'élève votre budget"));
 alert("Voici votre budget : " + budget);
 document.write("Voici votre budget : " + budget)
 
-var achats = Number (prompt("Entrez le montant de la totalité de vos achats"));
+let achats = Number (prompt("Entrez le montant de la totalité de vos achats"));
 alert("Voici le montant de vos achats : " + achats);
 document.write("Voici le montant de vos achats : " + achats)
 
