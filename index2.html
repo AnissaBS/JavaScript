@@ -6,8 +6,34 @@
     <title>Document</title>
 </head>
 <body>
-
-    <script src="script2.js"></script>
     
+
+    <script>
+
+alert("Exercice 2 :")
+
+    // Demander à l'utilisateur de saisir un nombre
+  const nombre = parseInt(prompt("Entrez un nombre pour calculer sa factorielle. Ce nombre doit être entier et positif : "));
+
+    // Vérifier si le nombre est valide
+  if (isNaN(nombre) || nombre < 0) {
+  alert("Veuillez entrer un nombre entier positif.");
+  }
+  else {
+
+  let factorielle = 1;
+
+    // Calcul de la factorielle
+  for (let i = 1; i <= nombre; i++) {
+    factorielle *= i;
+  }
+
+    // Afficher le résultat
+  alert("La factorielle de nombre est : " + factorielle);
+  }
+
+    </script>
+
+
 </body>
 </html>

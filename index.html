@@ -3,10 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js"></script>
     <title>Document</title>
 </head>
 <body>
     
+<script>
+
+            
+// Demander à l'utilisateur le nombre de notes
+const nombreNotes = parseInt(prompt("Entrez le nombre de notes souhaité :"));
+
+// Vérifier si le nombre de notes est valide
+if (isNaN(nombreNotes) || nombreNotes <= 0) {
+  alert("Veuillez entrer un nombre de notes valide.");
+}
+else {
+  const notes = []; // Tableau pour stocker les notes
+
+  // Demander à l'utilisateur de saisir chaque note et les stocker dans le tableau
+  for (let i = 0; i < nombreNotes; i++) {
+    const note = parseFloat(prompt(`Entrez la note #${i + 1}:`));
+
+    // Vérifier si la note est valide
+    if (isNaN(note) || note < 0 || note > 20) {
+      alert("Veuillez entrer une note valide entre 0 et 20.");
+      // Réduire la boucle pour permettre à l'utilisateur de réessayer
+      i--;
+    }
+    else {
+      notes.push(note);
+    }
+  }
+
+  // Calculer la moyenne
+  const sommeDesNotes = notes.reduce((acc, note) => acc + note, 0);
+  const moyenne = sommeDesNotes / nombreNotes;
+
+  // Afficher la moyenne dans une fenêtre
+  alert(`La moyenne des ${nombreNotes} notes est : ${moyenne.toFixed(2)}`);
+}
+
+
+
+</script>
+
+
 </body>
 </html>
