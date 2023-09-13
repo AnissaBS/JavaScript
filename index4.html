@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+function TableauAleatoire(){
+  const tableau = [];
+  const valeurs = 1000; // Possibilité de ne pas mettre cette constante et indiquer i<1000
+
+  for (let i = 0; i < valeurs; i++) {
+    const aleatoire = Math.floor(Math.random() *100); // Génère un nombre ENTIER(=Math.floor) aléatoire entre 0 (inclus) et 1000 (exclus)
+    tableau.push(aleatoire);
+  }
+
+  return tableau;
+}
+
+const Valeurs = TableauAleatoire(); // Appel de la fonction pour remplir le tableau
+
+console.log(Valeurs.slice(0, 10)); // Slide pour afficher les premières valeurs du tableau (facultatif)
+document.write(Valeurs.slice(0, 10))
+
+
+// Autre solution :
+
+// function tableau() {
+//   const aleatoire = Array.from({ length: 1000 }, () => Math.floor(Math.random() *100)); 
+//   return aleatoire;                                                     
+// }
+
+// const valeurs = tableau(); // Appel de la fonction pour remplir le tableau
+
+// console.log(valeurs.slice(0, 10));
+// document.write(valeurs.slice(0, 10))
+
+
+// fONCTIONS :
+    //Array.from pour créer un tableau d'une longueur de 1000.
+    // Math.random pour générer des nombres aléatoires
+    // Math.floor pour avoir seulement des nombres entiers
+    // .slice pour afficher les 10 premières valeurs aléatoires, ici facultatif -->
+
+
+</script>
+
+</body>
+</html>

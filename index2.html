@@ -8,31 +8,54 @@
 <body>
     
 
-    <script>
+<script>
+    function bjr(){  //Sous-programme qui permet d'exécuter des fonctions créer par nous-mêmes.
+        alert("Bonjour ");
+    }
+    bjr();
 
-alert("Exercice 2 :")
 
-    // Demander à l'utilisateur de saisir un nombre
-  const nombre = parseInt(prompt("Entrez un nombre pour calculer sa factorielle. Ce nombre doit être entier et positif : "));
+    function Bonjour(nom){
+        // nom = prompt("Entrez le nom : ")
+        alert("Bonjour " + nom);
+    }
+    Bonjour("Anissa"); // Enlever "Anissa" si on demande d'entrer le nom.
 
-    // Vérifier si le nombre est valide
-  if (isNaN(nombre) || nombre < 0) {
-  alert("Veuillez entrer un nombre entier positif.");
-  }
-  else {
 
-  let factorielle = 1;
+    function identite(nom, age){
+        alert("Bonjour " + nom + " Ton âge est : " + age);
+    }
+    identite("Anissa ", 22);
 
-    // Calcul de la factorielle
-  for (let i = 1; i <= nombre; i++) {
-    factorielle *= i;
-  }
 
-    // Afficher le résultat
-  alert("La factorielle de nombre est : " + factorielle);
-  }
+    function touteIdentite(nom, age){
+        nom = prompt("Entrez le nom :");
+        age = prompt("Entrez l'âge :");
 
-    </script>
+        alert("Votre nom est : " + nom + "Votre âge est :" + age);
+    }
+    touteIdentite();
+
+
+    function somme(a,b){
+        return a+b;
+    }
+
+    let maSomme2 = somme(12,12);
+    console.log("La somme est :" + maSomme2);
+
+
+    let operation = maSomme2 + 10;
+    console.log("La somme 2 est égale à : " + operation);
+    console.log(typeof(operation));
+
+
+    let maSomme3 = somme(operation, 14);
+    console.log("Ma somme 3 est :" + maSomme3)
+
+
+</script>
+
 
 
 </body>
