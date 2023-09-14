@@ -14,17 +14,17 @@ function TableauAleatoire(){
   const valeurs = 1000; // Possibilité de ne pas mettre cette constante et indiquer i<1000
 
   for (let i = 0; i < valeurs; i++) {
-    const aleatoire = Math.floor(Math.random() *100); // Génère un nombre ENTIER(=Math.floor) aléatoire entre 0 (inclus) et 1000 (exclus)
+    const aleatoire = Math.floor(Math.random() *1000); // Génère un nombre ENTIER(=Math.floor) aléatoire entre 0 (inclus) et 1000 (exclus)
     tableau.push(aleatoire);
   }
 
   return tableau;
 }
 
-const Valeurs = TableauAleatoire(); // Appel de la fonction pour remplir le tableau
+const result = TableauAleatoire(); // Appel de la fonction pour remplir le tableau
 
-console.log(Valeurs.slice(0, 10)); // Slide pour afficher les premières valeurs du tableau (facultatif)
-document.write(Valeurs.slice(0, 10))
+console.log(result.slice(0, 1000)); // Slide pour afficher les premières valeurs du tableau (facultatif)
+document.write(result.slice(0, 1000))
 
 
 // Autre solution :

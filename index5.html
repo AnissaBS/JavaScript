@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+function Tableau(){
+  const tableau = [];
+
+  for (let i = 0; i < 100; i++) {
+    const aleatoire = Math.floor(Math.random() *100); // Génère un nombre ENTIER(=Math.floor) aléatoire entre 0 (inclus) et 100 (exclus)
+    tableau.push(aleatoire); // Insérer les valeurs aléatoires dans le tableau
+  }
+
+  return tableau; // return : son rôle principal est de retourner une valeur depuis une fonction vers l'endroit où la fonction a été appelée
+}
+
+const result = Tableau(); // Appel de la fonction pour remplir le tableau
+
+console.log(result.slice(0, 100)); // Slice pour afficher les premières valeurs du tableau (facultatif)
+document.write(result.slice(0, 100))
+
+</script>
+
+
+</body>
+</html>
