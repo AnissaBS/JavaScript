@@ -7,39 +7,23 @@
 </head>
 <body>
     
-
     <script>
-        let machaine = "Le réveil n'a pas fonctionné ce matin !";
-        console.log("La taille de la chaine : " + machaine.length); // lenght : Voir la longueur de la chaine de caractères.
-        console.log("Le caractère à la position 5 est : " + machaine.charAt(5)); // Voir le caractère à la position spécifié entre parenthèses.
-        console.log(machaine.indexOf("o")); // Indique la position numérique du premier caractère spécifié (en l'occurence "o").
-        console.log(machaine.substring(0,8)); // substring : Permet d'extraire une partie de la chaine de caractères commençant de la position début et finissant à la position fin -1.
-        console.log(machaine.split("o")); //Découpe la chaîne de caractères à partir des "o", en l'occurence ici en 3 colonnes, en les effacer.
-        let maVar = machaine.split("o"); 
-        console.log(maVar.length); // lenght : Voir la longueur de la chaine de caractères.
-        console.log(maVar.join("-")); // Remplace les "o" par des tirets.
-        // console.log(maVar.toLocal());
 
-        // Permet de changer le formatage de la chaîne de caractère en majuscule (Upper) et en minuscule (Lower).
-        console.log(machaine.toUpperCase());
-        console.log(machaine.toLowerCase());
-
-
-        // Test avec une table
-
-        let matab = [1, "toto", "47", 45, "tata", "tutu"];
-        console.log(matab);
-        matab = matab.join(" ");
-        console.log(matab);
-        matab = matab.split(" ");
-        console.log(matab);
-
-        //
-
-
+    function afficher() {
+        let nombre = 20;
+        while (nombre >= 0){
+            document.write(nombre);  // Afficher le nombre (ici 20)
+            
+            // if (nombre == 0) { // Si ce n'est pas le dernier nombre,....
+            //     document.write('-');  // ....afficher un tiret
+            // }
+            
+            nombre -= 2;  // Décrémenter le nombre de 2
+        }
+    }
+    afficher();
 
     </script>
-
 
 </body>
 </html>
