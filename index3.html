@@ -4,39 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    
     <style>
+        
+        body {
+            font-family: 'Cambria', 'Times New Roman', 'Cochin';
+            text-align: center;
+        }
+
+        h1{
+            text-decoration: underline;
+        }
+
         table {
             width: 60%;
             margin: 0 auto;
             border-collapse: collapse;
         }
-        table, th, td {
+
+        th, td {
             border: 1px solid black;
+            padding: 10px;
             text-align: center;
         }
-        th, td {
-            padding: 10px;
-        }
+
         th {
-            font-weight: bold;
             background-color: gray;
-        }
-        td:first-child, th:first-child {
             font-weight: bold;
-            background-color: gray;
         }
-        td:first-child {
+
+        .jaune{
             background-color: yellow;
         }
+
     </style>
+
 </head>
+
 <body>
-    <h1>La table de multiplication</h1>
+
+    <h1>Table de multiplication</h1>
+
     <table>
         <tr>
-            <td></td>
+            <th class="jaune">X</th>
             <th>1</th>
             <th>2</th>
             <th>3</th>
@@ -48,99 +58,20 @@
             <th>9</th>
             <th>10</th>
         </tr>
+
         <script>
             for (let i = 1; i <= 10; i++) {
                 document.write("<tr>");
-                if (i === 1) {
-                    document.write("<th>X</th>");
-                } else {
-                    document.write("<th>" + i + "</th>");
-                }
+                document.write("<th>" + i + "</th>");
                 for (let j = 1; j <= 10; j++) {
-                    if (i === 1) {
-                        document.write("<th>" + j + "</th>");
-                    } else {
-                        document.write("<td>" + (i * j) + "</td>");
-                    }
+                    document.write("<td>" + (i * j) + "</td>");
                 }
                 document.write("</tr>");
             }
         </script>
+
     </table>
-    
-    <!-- <style>
-        h2{
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            text-decoration: underline;
-            text-align: center;
-        }
-
-        table{
-            display: flex;
-            align-items: center;
-            border: 1px solid black;
-            width: 60%;
-            height: 80%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #x{
-            background-color: rgb(239, 239, 170);
-            font-weight: bold;
-        }
-
-        .grey{
-            background-color: rgb(178, 178, 178);
-            font-weight: bold;
-        }
-
-    </style>
-
-</head>
-<body>
-
-    <h2>La table de multiplication</h2>
-
-<table>
-    <tr>
-        <td></td>
-        <th .class="grey">1</th>
-        <th .class="grey">2</th>
-        <th .class="grey">3</th>
-        <th .class="grey">4</th>
-        <th .class="grey">5</th>
-        <th .class="grey">6</th>
-        <th .class="grey">7</th>
-        <th .class="grey">8</th>
-        <th .class="grey">9</th>
-        <th .class="grey">10</th>
-    </tr>
-
-        <script>
-            for (let i = 1; i <= 10; i++) {
-                document.write("<tr>");
-
-                if (i === 1) {
-                    document.write("<th>X</th>");
-                } else {
-                    document.write("<th>" + i + "</th>");
-                }
-
-                for (let j = 1; j <= 10; j++) {
-                    if (i === 1) {
-                        document.write("<th>" + j + "</th>");
-                    } else {
-                        document.write("<td>" + (i * j) + "</td>");
-                    }
-                }
-
-                document.write("</tr>");
-            }
-        </script>
-
-</table> -->
 
 </body>
+
 </html>
