@@ -6,50 +6,50 @@
     <title>Document</title>
 </head>
 <body>
-    <img src="fleur2.jpg" alt="" id="fleur2" width="300px" height="300px">
-    <img src="fleur3.jpg" alt="" width="300px" height="300px">
-    <img src="fleur4.jpg" alt="" width="300px" height="300px">
-    <img src="fleur5.jpg" alt="" width="300px" height="300px">
-
-    <input type="button" name="changement" value="Appuie sur moi !" onclick="a()">
-    <!-- <input type="button" name="changement" value="Appuie sur moi !" onclick="b()">
-    <input type="button" name="changement" value="Appuie sur moi !" onclick="c()">
-    <input type="button" name="changement" value="Appuie sur moi !" onclick="d()"> -->
-    <input type="button" onclick='window.location.reload(false)' value="Rafraichir"/>
 
     <script>
-        function a(){
-            document.getElementById("fleur2").src="fleur5.jpg";  // Remplacer l'image 1 par l'image 4k
-            for (i=0;i<document.getElementsByTagName("img").length;i++){
-                document.getElementsByTagName('img')[i].src="fleur5.jpg";
-            }
+
+        let taille = Number (prompt("Entrez votre taille (ex : 1.75) : "));
+        document.write("Votre taille : "  + taille);
+
+        let poids = Number (prompt("Entrez votre poids : "));
+        document.write(" Votre poids : "  + poids);
+
+        let imc = (poids/(taille*taille));
+        console.log(imc);
+        document.write(" Voici votre IMC : " + imc);
+
+        // var resultat = document.body;
+
+        if (imc < 18.5){
+            // resultat.innerHTML += '<span style="color: red;">Votre IMC est : ' + imc.toFixed(2) + ' €</span>';
+            document.write(" Vous êtes considéré comme étant en Sous-poids.");
+        }
+        else if (imc >= 18.5 && imc <= 24.9){
+            // resultat += '<span style="color: green;">Le prix TTC est : ' + imc.toFixed(2) + ' €</span>';
+            document.write(" Vous êtes considéré comme ayant un poids Normal.");
+        }
+        else if (imc >= 25 && imc <= 29.9){
+            // resultat += '<span style="color: green;">Le prix TTC est : ' + imc.toFixed(2) + ' €</span>';
+            document.write(" Vous êtes considéré comme étant en Surpoids.");
+        }
+        else if (imc >= 30 && imc <= 34.9){
+            // resultat += '<span style="color: green;">Le prix TTC est : ' + imc.toFixed(2) + ' €</span>';
+            document.write(" Vous êtes considéré comme étant en Obésite de stade 1.");
+        }
+        else if (imc >= 35 && imc <= 39.9){
+            // resultat += '<span style="color: green;">Le prix TTC est : ' + imc.toFixed(2) + ' €</span>';
+            document.write(" Vous êtes considéré comme étant en Obésite de stade 2.");
+        }
+        else if (imc >= 40){
+            // resultat += '<span style="color: green;">Le prix TTC est : ' + imc.toFixed(2) + ' €</span>';
+            document.write(" Vous êtes considéré comme étant en Obésite de stade 3 (obésité sévère).");
         }
 
-        // function b(){
-        //     document.getElementById("fleur2").src="fleur5.jpg";  // Remplacer l'image 1 par l'image 4k
-        //     for (i=2;i<document.getElementsByTagName("img").length;i++){
-        //         document.getElementsByTagName('img')[i].src="fleur5.jpg";
-        //     }
-        // }
-
-        // function c(){
-        //     document.getElementById("fleur2").src="fleur5.jpg";  // Remplacer l'image 1 par l'image 4k
-        //     for (i=3;i<document.getElementsByTagName("img").length;i++){
-        //         document.getElementsByTagName('img')[i].src="fleur5.jpg";
-        //     }
-        // }
-
-        // function d(){
-        //     document.getElementById("fleur2").src="fleur5.jpg";  // Remplacer l'image 1 par l'image 4k
-        //     for (i=4;i<document.getElementsByTagName("img").length;i++){
-        //         document.getElementsByTagName('img')[i].src="fleur5.jpg";
-        //     }
-        // }
-
-        // getElementById : cible un ID
-        // getElementByTagName : cible un élément avec son nom
-
     </script>
+
+<!-- "&&" : pour ajouter une condition qui doit elle aussi être forcément vraie
+     "||" : pour ajouter une condition qui peut être vraie, soit l'une soit l'autre -->
 
 </body>
 </html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul d'Aire</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, rgb(170, 208, 169), rgb(24, 86, 23));
+            text-align: center;
+            font-family: 'Arial', 'sans-serif';
+            color: rgb(255, 255, 255);
+        }
+
+        h1{
+            font-family: 'perpetua', 'rockwell';
+            text-decoration: underline;
+            
+        }
+
+        .formes {
+            display: flex;
+            justify-content: space-around;
+            margin: 50px;
+        }
+
+        .formes img {
+            cursor: pointer;
+        }
+
+        a:hover{
+            box-shadow: 10px 5px 5px black;
+            border-radius: 50px 10px;
+        }
+
+        #cercle{
+            width: 200px;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 50px 10px;
+            padding: 50px;
+        }
+
+        #rectangle{
+            width: 260px;
+            height: 200px;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 50px 10px;
+            padding: 50px;
+        }
+
+        #triangle{
+            width: 200px;
+            height: 200px;
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 50px 10px;
+            padding: 50px;
+        }
+
+        #resultat {
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Calcul d'Aire de Formes Géométriques</h1>
+
+    <div class="formes">
+        <a href=""><img id="cercle" src="cercle.png" alt="Cercle"></a>
+        <a href=""><img id="rectangle" src="rectangle.png" alt="Rectangle"></a>
+        <a href=""><img id="triangle" src="triangle.png" alt="Triangle"></a>
+    </div>
+
+    <div id="inserer" style="display: none;">
+        <input type="text" id="valeur1" placeholder="Valeur 1">
+        <input type="text" id="valeur2" placeholder="Valeur 2">
+        <button id="calculer">Calculer</button>
+        <input type="button" onclick='window.location.reload(false)' value="Autre forme"/>
+    </div>
+
+    <div id="resultat"></div>
+
+    <script>
+        // Fonctions pour afficher les champs de saisie
+
+        function inserer() {
+            document.getElementById("inserer").style.display = "block";
+        }
+
+        // Fonction pour calculer l'aire du cercle
+
+        function calculCercle() {
+            const rayon = parseFloat(document.getElementById("valeur1").value);
+            if (!isNaN(rayon)) { //!isNaN(valeur) est une manière de tester si une variable contient une valeur numérique valide, vérifier si une valeur n'est pas un nombre (NaN)
+                const aire = Math.PI * Math.pow(rayon, 2); // Math.pow : pour élever un nombre à une puissance = Math.pow(base, exposant), ici rayon puissance 2 ou rayon^2
+                document.getElementById("resultat").textContent = "L'aire du cercle est : " + aire.toFixed(2);
+            }
+            else {
+                alert("Veuillez saisir une valeur numérique.");
+            }
+        }
+
+        // Fonction pour calculer l'aire du rectangle
+
+        function calculRectangle() {
+            const longueur = parseFloat(document.getElementById("valeur1").value);
+            const largeur = parseFloat(document.getElementById("valeur2").value);
+            if (!isNaN(longueur) && !isNaN(largeur)) {
+                const aire = longueur * largeur;
+                document.getElementById("resultat").textContent = "L'aire du rectangle est : " + aire.toFixed(2); // .toFixed() : sert à mettre un nombre max de chiffre après la virgule, à savoir ici 2 chiffres après la virgule
+            }
+            else {
+                alert("Veuillez saisir des valeurs numériques valides.");
+            }
+        }
+
+        // Fonction pour calculer l'aire du triangle
+
+        function calculTriangle() {
+            const base = parseFloat(document.getElementById("valeur1").value);
+            const longueur = parseFloat(document.getElementById("valeur2").value);
+            if (!isNaN(base) && !isNaN(longueur)) {
+                const aire = (base * longueur) / 2;
+                document.getElementById("resultat").textContent = "L'aire du triangle est : " + aire.toFixed(2);
+            }
+            else {
+                alert("Veuillez saisir des valeurs numériques valides.");
+            }
+        }
+
+        // Écouteurs d'événements pour les images
+        document.getElementById("cercle").addEventListener("click", function () { // .addEventListener permet de définir une fonction qui sera appelée lorsque l'événement se produit.
+            inserer();
+            document.getElementById("calculer").addEventListener("click", calculCercle);
+        });
+
+        document.getElementById("rectangle").addEventListener("click", function () {
+            inserer();
+            document.getElementById("calculer").addEventListener("click", calculRectangle);
+        });
+
+        document.getElementById("triangle").addEventListener("click", function () {
+            inserer();
+            document.getElementById("calculer").addEventListener("click", calculTriangle);
+        });
+    </script>
+</body>
+</html>

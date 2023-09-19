@@ -6,46 +6,33 @@
     <title>Document</title>
 </head>
 <body>
-
-<h1>Nombres Premiers entre 0 et 100</h1>
-<div id="NbrPremiers"></div>
+    
 
 <script>
 
-    const NbrPremiers = [];
-    for (let i = 2; i <= 100; i++) {
-        let nombre = true;
-        for (let j = 2; j < i; j++) {
-            if (i % j === 0) {
-                nombre = false;
-                break;
-            }
-        }
-        if (nombre) {
-            NbrPremiers.push(i);
-        }
-    }
+    
+let formule = (prompt("Entrez la formule de l'aire souhaitée (cercle, triangle ou rectangle) :"));
+        document.write("Vous souhaitez l'aire d'un : "  + formule);
 
-    const NbrPremiersDiv = document.getElementById("NbrPremiers");
-    NbrPremiersDiv.textContent = NbrPremiers.join(", ");
+if (formule === "cercle") {
+    var rayon = parseFloat(prompt("Entrez le rayon du cercle :"));  //La fonction parseFloat() en JavaScript sert à convertir une chaîne de caractères en un nombre flottant (nombre décimal à virgule flottante par ex).
+    var aire = Math.PI * (rayon^2);
+    alert("L'aire du cercle est : " + aire);
+} else if (formule === "rectangle") {
+    var longueur = parseFloat(prompt("Entrez la longueur du rectangle :"));
+    var largeur = parseFloat(prompt("Entrez la largeur du rectangle :"));
+    var aire = longueur * largeur;
+    alert("L'aire du rectangle est : " + aire);
+} else if (formule === "triangle") {
+    var base = parseFloat(prompt("Entrez la base du triangle :"));
+    var hauteur = parseFloat(prompt("Entrez la hauteur du triangle :"));
+    var aire = (base * hauteur) / 2;
+    alert("L'aire du triangle est : " + aire);
+} else {
+    alert("Veuillez entrer 'cercle', 'rectangle' ou 'triangle'.");
+}
 
 </script>
-
-
-<!--
-
-Le "===" :
- 1. Si les deux valeurs comparées sont du même type et ont la même valeur, l'opérateur === renverra "true".
- 2. Si les deux valeurs sont de types différents, l'opérateur === renverra "false", même si les valeurs sont équivalentes après une conversion implicite de type.
- 3. Si les deux valeurs sont du même type, mais ont des valeurs différentes, l'opérateur === renverra "false".
-
-
-Le "%" :
- L'expression i % j en programmation signifie "le reste de la division de i par j". C'est ce que l'on appelle l'opérateur de modulo. Il renvoie le reste de la division entière de i par j.
- Par exemple, si i vaut 10 et j vaut 3, alors i % j équivaut à 1, car lorsque vous divisez 10 par 3, vous obtenez un quotient de 3 avec un reste de 1.
- 
--->
-
 
 
 </body>
