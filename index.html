@@ -6,22 +6,48 @@
     <title>Document</title>
 </head>
 <body>
-    
-    <script>
+    <img src="fleur2.jpg" alt="" id="fleur2" width="300px" height="300px">
+    <img src="fleur3.jpg" alt="" width="300px" height="300px">
+    <img src="fleur4.jpg" alt="" width="300px" height="300px">
+    <img src="fleur5.jpg" alt="" width="300px" height="300px">
 
-    function afficher() {
-        let nombre = 20;
-        while (nombre >= 0){
-            document.write(nombre);  // Afficher le nombre (ici 20)
-            
-            // if (nombre == 0) { // Si ce n'est pas le dernier nombre,....
-            //     document.write('-');  // ....afficher un tiret
-            // }
-            
-            nombre -= 2;  // Décrémenter le nombre de 2
+    <input type="button" name="changement" value="Appuie sur moi !" onclick="a()">
+    <!-- <input type="button" name="changement" value="Appuie sur moi !" onclick="b()">
+    <input type="button" name="changement" value="Appuie sur moi !" onclick="c()">
+    <input type="button" name="changement" value="Appuie sur moi !" onclick="d()"> -->
+    <input type="button" onclick='window.location.reload(false)' value="Rafraichir"/>
+
+    <script>
+        function a(){
+            document.getElementById("fleur2").src="fleur5.jpg";  // Remplacer l'image 1 par l'image 4k
+            for (i=0;i<document.getElementsByTagName("img").length;i++){
+                document.getElementsByTagName('img')[i].src="fleur5.jpg";
+            }
         }
-    }
-    afficher();
+
+        // function b(){
+        //     document.getElementById("fleur2").src="fleur5.jpg";  // Remplacer l'image 1 par l'image 4k
+        //     for (i=2;i<document.getElementsByTagName("img").length;i++){
+        //         document.getElementsByTagName('img')[i].src="fleur5.jpg";
+        //     }
+        // }
+
+        // function c(){
+        //     document.getElementById("fleur2").src="fleur5.jpg";  // Remplacer l'image 1 par l'image 4k
+        //     for (i=3;i<document.getElementsByTagName("img").length;i++){
+        //         document.getElementsByTagName('img')[i].src="fleur5.jpg";
+        //     }
+        // }
+
+        // function d(){
+        //     document.getElementById("fleur2").src="fleur5.jpg";  // Remplacer l'image 1 par l'image 4k
+        //     for (i=4;i<document.getElementsByTagName("img").length;i++){
+        //         document.getElementsByTagName('img')[i].src="fleur5.jpg";
+        //     }
+        // }
+
+        // getElementById : cible un ID
+        // getElementByTagName : cible un élément avec son nom
 
     </script>
 
