@@ -1,0 +1,101 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: rgb(58, 71, 255);
+    background-image: url('peintureBleu.jpg');
+    background-size: 100%;
+    text-align: center;
+    font-family:'Cambria', 'Cochin', 'Georgia', 'Times New Roman';
+}
+
+h1{
+    margin: 50px;
+    box-shadow: 10px 8px 10px rgb(0, 0, 0) ;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    height: 50px;
+    padding: 20px;
+}
+
+h2{
+    text-decoration: underline;
+    margin-top: 50px;
+}
+
+.formes {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px;
+}
+
+#blanc{
+    background-color: white;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 50px 10px;
+    box-shadow: 10px 5px 8px rgb(0, 0, 0);
+}
+
+
+img:hover{
+    box-shadow: 10px 5px 8px rgb(0, 0, 0);
+    border-radius: 50px 10px;
+    cursor: pointer;
+}
+
+#carre{
+width: 150px;
+height: 120px;
+border: 3px solid rgb(255, 255, 255);
+border-radius: 50px 10px;
+padding: 50px;
+}
+
+
+#cercle{
+    width: 140px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 50px 10px;
+    padding: 50px;
+}
+
+#rectangle{
+    width: 150px;
+    height: 120px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 50px 10px;
+    padding: 50px;
+}
+
+#triangle{
+    width: 150px;
+    height: 120px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 50px 10px;
+    padding: 50px;
+}
+
+#valeur1{
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+#valeur2{
+    text-align: center;
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+}
+
+#resultat {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+}

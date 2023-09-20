@@ -1,0 +1,80 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url('marbre.jpg');
+    background-repeat: no-repeat;
+    background-size: 115%;
+    text-align: center;
+    font-family:'Cambria', 'Cochin', 'Georgia', 'Times New Roman';
+    color: rgb(255, 255, 255);
+    display: flex;                  /* de là */
+    justify-content: center;           /* ligne 16 à 19 */
+    align-items: center;            /* Sert à dispositionner le corps du body au milieu de la page */
+    height: 100vh;                  /* jusque là */
+}
+
+h1{
+    font-weight: lighter;
+    text-decoration: underline;
+    margin: 50px 0px 180px 0px;
+}
+
+#valeurs{
+    background-image: url('fruits.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 500px;
+    height: 700px;
+}
+
+#gris{
+    background-color: rgba(0, 0, 0, 0.228);
+    border-radius: 18px;
+    width: 500px;
+    height: 690px;
+    padding-top: 10px;
+}
+
+#text{
+    font-size: 20px;
+}
+
+#valeur1{
+    width: 200px;
+    height: 30px;
+    display: flex;
+    margin: 20px 0px 50px 150px;
+    border-radius: 10px;
+    border: none;
+}
+
+#valeur2{
+    width: 200px;
+    height: 30px;
+    display: flex;
+    margin: 20px 0px 50px 150px;
+    border-radius: 10px;
+    border: none;
+}
+
+#entrer:hover{
+    box-shadow: 2px 2px 10px black;
+}
+
+#entrer{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.177);
+    width: 180px;
+    height: 70px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 85px;
+}

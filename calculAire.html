@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculAire.css">
+    <title>Calcul d'Aire</title>
+    
+</head>
+<body>
+    <h1>Calcul d'Aire de Formes Géométriques</h1>
+
+    <h2>Sélectionner une image :</h2>
+
+    <div class="formes">
+        <div id="blanc"><img id="carre" src="carre.png" alt="Carré"></div>
+        <div id="blanc"><img id="cercle" src="cercle.png" alt="Cercle"></div>
+        <div id="blanc"><img id="rectangle" src="rectangle.png" alt="Rectangle"></div>
+        <div id="blanc"><img id="triangle" src="triangle2.png" alt="Triangle"></div>
+    </div>
+
+    <div id="inserer" style="display: none;">
+        <input type="text" id="valeur1" placeholder="Valeur 1">
+        <input type="text" id="valeur2" placeholder="Valeur 2">
+        <button id="calculer">Calculer</button>
+        <input type="button" onclick='window.location.reload(false)' value="Sélectionner une autre forme"/>
+    </div>
+
+    <div id="resultat"></div>
+
+    <script>
+        
+        // Fonctions pour afficher les champs de saisie
+
+        function inserer() {
+            document.getElementById("inserer").style.display = "block";
+        }
+
+
+        // Fonction pour calculer l'aire du cercle
+
+        function calculCarre() {
+            const cote = parseFloat(document.getElementById("valeur1").value);
+            if (!isNaN(cote)) {
+                const aire = cote * cote;
+                document.getElementById("resultat").textContent = "L'aire du carré (côté * côté) est : " + aire.toFixed(2) + " cm.";
+            }
+            else {
+                alert("Veuillez saisir une valeur numérique.");
+            }
+        }
+
+
+        function calculCercle() {
+            const rayon = parseFloat(document.getElementById("valeur1").value);
+            if (!isNaN(rayon)) { //!isNaN(valeur) est une manière de tester si une variable contient une valeur numérique valide, vérifier si une valeur n'est pas un nombre (NaN).
+                const aire = Math.PI * Math.pow(rayon, 2); // Math.pow : pour élever un nombre à une puissance = Math.pow(base, exposant), ici rayon puissance 2 (ou rayon^2).
+                document.getElementById("resultat").textContent = "L'aire du cercle (PI * rayon^2) est : " + aire.toFixed(2) + " cm.";
+            }
+            else {
+                alert("Veuillez saisir une valeur numérique.");
+            }
+        }
+
+
+        // Fonction pour calculer l'aire du rectangle
+
+        function calculRectangle() {
+            const longueur = parseFloat(document.getElementById("valeur1").value);
+            const largeur = parseFloat(document.getElementById("valeur2").value);
+            if (!isNaN(longueur) && !isNaN(largeur)) {
+                const aire = longueur * largeur;
+                document.getElementById("resultat").textContent = "L'aire du rectangle (longueur * largeur) est : " + aire.toFixed(2) + " cm."; // .toFixed() : sert à mettre un nombre max de chiffre après la virgule, à savoir ici 2 chiffres après la virgule
+            }
+            else {
+                alert("Veuillez saisir des valeurs numériques valides.");
+            }
+        }
+
+
+        // Fonction pour calculer l'aire du triangle
+
+        function calculTriangle() {
+            const base = parseFloat(document.getElementById("valeur1").value);
+            const longueur = parseFloat(document.getElementById("valeur2").value);
+            if (!isNaN(base) && !isNaN(longueur)) {
+                const aire = (base * longueur) / 2;
+                document.getElementById("resultat").textContent = "L'aire du triangle (base * longeur /2) est : " + aire.toFixed(2) + " cm.";
+            }
+            else {
+                alert("Veuillez saisir des valeurs numériques valides. N'oubliez pas d'indiquer deux valeurs lorsque nécessaire(rectangle, triangle).");
+            }
+        }
+
+
+        // Écouteurs d'événements pour les images
+
+        document.getElementById("cercle").addEventListener("click", function () { // .addEventListener permet de définir une fonction qui sera appelée lorsque l'événement se produit.
+            inserer();
+            document.getElementById("calculer").addEventListener("click", calculCercle);
+        });
+
+        document.getElementById("rectangle").addEventListener("click", function () {
+            inserer();
+            document.getElementById("calculer").addEventListener("click", calculRectangle);
+        });
+
+        document.getElementById("triangle").addEventListener("click", function () {
+            inserer();
+            document.getElementById("calculer").addEventListener("click", calculTriangle);
+        });
+
+        document.getElementById("carre").addEventListener("click", function () {
+            inserer();
+            document.getElementById("calculer").addEventListener("click", calculCarre);
+        });
+
+    </script>
+</body>
+</html>

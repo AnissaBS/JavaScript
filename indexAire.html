@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<script>
+
+    
+let formule = (prompt("Entrez la formule de l'aire souhaitée (cercle, triangle ou rectangle) :"));
+        document.write("Vous souhaitez l'aire d'un : "  + formule);
+
+if (formule === "cercle") {
+    var rayon = parseFloat(prompt("Entrez le rayon du cercle :"));  //La fonction parseFloat() en JavaScript sert à convertir une chaîne de caractères en un nombre flottant (nombre décimal à virgule flottante par ex).
+    var aire = Math.PI * (rayon^2);
+    alert("L'aire du cercle est : " + aire);
+} else if (formule === "rectangle") {
+    var longueur = parseFloat(prompt("Entrez la longueur du rectangle :"));
+    var largeur = parseFloat(prompt("Entrez la largeur du rectangle :"));
+    var aire = longueur * largeur;
+    alert("L'aire du rectangle est : " + aire);
+} else if (formule === "triangle") {
+    var base = parseFloat(prompt("Entrez la base du triangle :"));
+    var hauteur = parseFloat(prompt("Entrez la hauteur du triangle :"));
+    var aire = (base * hauteur) / 2;
+    alert("L'aire du triangle est : " + aire);
+} else {
+    alert("Veuillez entrer 'cercle', 'rectangle' ou 'triangle'.");
+}
+
+</script>
+
+
+</body>
+</html>
