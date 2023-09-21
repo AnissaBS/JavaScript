@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        if(confirm("Voulez-vous commencer le jeu ?")){
+            var nombreMagique = (Math.floor(Math.random()* 10));
+            var coup = 0;
+            while(true){
+                coup++;
+                var val = prompt("Votre chiffre ?");
+
+                if (val){
+                    if(val == nombreMagique){
+                        alert("Félicitations, vous avez mis " + coup + "coup(s) !");
+                        break;
+                    } else if (val > nombreMagique){
+                        alert("Il est plus petit.");
+                    } else if (val < nombreMagique){
+                        alert("Il est plus grand.");
+                    }
+                }else{
+                    break;
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>

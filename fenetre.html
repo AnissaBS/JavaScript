@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-image: url(cielRose.jpg);
+            background-size: cover;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        a{
+            font-size: 20px;
+        }
+
+        a:hover{
+            color: rgb(133, 87, 175);
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#" onclick="fenetre()">Lance moi cette nouvelle fenêtre !</a>
+
+    <script>
+        function fenetre(){
+            window = window.open('','', 'left = 0, top=0, widht=0, height=0, scrollbars=no');
+            window.document.write("Ic c'est ma nouvelle fenêtre eheh !");
+        }
+    </script>
+</body>
+</html>

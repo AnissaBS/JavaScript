@@ -12,7 +12,7 @@ body{
     font-family:'Cambria', 'Cochin', 'Georgia', 'Times New Roman';
     color: rgb(255, 255, 255);
     display: flex;                  /* de là */
-    justify-content: center;           /* ligne 16 à 19 */
+    justify-content: center;        /* ligne 16 à 19 */
     align-items: center;            /* Sert à dispositionner le corps du body au milieu de la page */
     height: 100vh;                  /* jusque là */
 }

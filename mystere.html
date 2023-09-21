@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        color: white;
+        background-image: url('tirer.jpg');
+        background-repeat: no-repeat;
+        background-size: 111%;
+    }
+
+    p{
+        text-align: center;
+        font-size: 30px;
+        margin: 70px 0px;
+    }
+
+    label{
+        font-size: 20px;
+        margin-left: 150px;
+        text-decoration: underline;
+    }
+
+    #chiffre{
+        margin-left: 20px;
+        height: 20px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    #valider{
+        background-color: rgb(255, 255, 255);
+        margin-top: 40px;
+        margin-left: 250px;
+        width: 100px;
+        height: 30px;
+        border: none;
+        border-radius: 10px;
+    }
+
+    #nouvelle{
+        background-color: rgb(255, 255, 255);
+        width: 150px;
+        height: 25px;
+        border: none;
+        border-radius: 10px;
+        margin-top: 200px;
+        margin-left: 30px;
+    }
+
+    #plusoumoins{
+        font-size: 20px;
+        margin: 40px 0px 0px 30px;
+
+    }
+
+
+</style>
+
+<body>
+
+    <p>Trouve le nombre mystère ou tu MEURS.</p>
+
+
+    <label>Saisis ton chiffre</label>
+    <input type="text" id="chiffre" onkeydown="if (event.keyCode == 13) mystere()"> <br />
+    <input type="button" id="valider" onclick="mystere()" value="Tu es sûr ?"> <br />
+    <input type="button" id="nouvelle" onclick="random()" value="Nouvelle partie">
+
+    <div id="plusoumoins"></div>
+
+
+    <script>
+        let coup;
+        let nombreMyst;
+
+        function random() {
+            nombreMyst = Math.floor(Math.random() * 25);
+            coup = 0;
+            console.log(nombreMyst);
+        }
+
+        function mystere() {
+            let val = document.getElementById("chiffre").value;
+            console.log(val);
+
+            if (!isNaN(val)) {
+                coup++;
+
+                if (val == nombreMyst) {
+                    document.getElementById('plusoumoins').textContent = "Tu as de la chance, tu as réussi au bout de la " + coup + "tentative(s) ! Je ne tuerai donc que " + coup + " membre(s) de ta famille";
+                    document.getElementById("chiffre").value="";
+
+                } else if (val > nombreMyst) {
+                    document.getElementById('plusoumoins').innerText = "C'est plus. Dépêche toi !";
+                    document.getElementById("chiffre").value="";
+
+                } else if (val < nombreMyst) {
+                    document.getElementById('plusoumoins').innerText = "C'est moins que ça, tu attends quoi !?";
+                    document.getElementById("chiffre").value="";
+                }
+            }
+        }
+
+
+
+
+
+
+
+
+        // function mystere(){
+        //     let val = parseInt(document.getElementById('chiffre').value);
+        //     if (!isNaN(val)){
+        //         coup++;
+        //         // document.getElementById('score').innerText = "nombres de coups :" +coups;
+
+        //         if (val === nombreMyst) {
+        //         document.getElementById("plusoumoins").innerText = "Bravo tu as trouvé le chiffre en " + coups + " essai(s) !!";
+        //         console.log("gfg");
+        //         } else if (val < nombreMyst) {
+        //         document.getElementById("plusoumoins").innerText = "C'est plus grand !";
+        //         } else {
+        //         document.getElementById("plusoumoins").innerText = "C'est plus petit !";
+        //         console.log("gfhghggrtg");
+        //         }
+        //     }
+        // }
+
+    </script>
+</body>
+
+</html>
