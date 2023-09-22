@@ -3,82 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            /* white-space: nowrap; white-space permet spécifier la manière dont votre navigateur va interpréter les espaces blancs et les types de caractères de retour à la ligne et la justification automatique : normal, pre, nowrap, pre-wrap, pre-line */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
+    <title>Document</title><!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
 
-        #bouton{
-            background-color: rgb(160, 197, 197);
-            width: 120px;
-            height: 50px;
-            border-radius: 10px ;
-            border: none;
-        }
+        <style>
 
-        .message {
-            display: inline;
-            margin: 5px;
-        }
-
-        .style1 {
-            font-size: 16px;
-            color: blue;
-        }
-
-        .style2 {
-            font-size: 24px;
-            color: red;
-        }
-
-        .style3 {
-            font-size: 32px;
-            color: green;
-        }
-
-        .style4 {
-            font-size: 40px;
-            color: purple;
-        }
-    </style>
-</head>
-<body>
-    <button id="bouton">BIJOUUUUR</button>
-
-    <div id="div"></div>
-
-    <script>
-        function bonjour() {
-            var body = document.body;
-
-            for (var i = 0; i < 100; i++) {
-                var bjr = document.getElementById("div");
-                bjr.textContent = "Bonjour";
-
-                if (i < 25) {                            // Pour appliquer un style différent à chaque quart
-                    bjr.className = "style1";
-                } else if (i < 50) {
-                    bjr.className = "style2";
-                } else if (i < 75) {
-                    bjr.className = "style3";
-                } else {
-                    bjr.className = "style4";
-                }
-
-                body.appendChild(bjr);
+            body {
+                display: flex;
+                /* flex-direction: column; */
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                width: 100vw;
             }
-        }
 
-        document.getElementById("bouton").addEventListener("click", bonjour);
+            #bouton{
+                width: 200px;
+                height: 200px;
+                border-radius: 100%;
+            }
 
-    </script>
 
-</body>
-</html>
+            /* div{
+
+            } */
+    
+            /* Styles pour chaque quart */
+
+            .style1 {
+                font-size: 14px;
+                color: rgb(128, 128, 198);
+            }
+    
+            .style2 {
+                font-size: 20px;
+                color: rgb(112, 150, 187);
+            }
+    
+            .style3 {
+                font-size: 28px;
+                color: rgb(142, 191, 142);
+            }
+    
+            .style4 {
+                font-size: 36px;
+                color: rgb(184, 136, 184);
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <button id="bouton">Bonjour</button>
+    
+        <script>
+            function bonjour() {
+                var body = document.body;
+    
+                for (var i = 0; i < 100; i++) {
+                    var message = document.createElement("div");
+                    message.textContent = "BijouuUuuur";
+    
+                    // Appliquer un style différent à chaque quart
+
+                    if (i < 25) {
+                        message.className = "style1";
+                    } else if (i < 50) {
+                        message.className = "style2";
+                    } else if (i < 75) {
+                        message.className = "style3";
+                    } else {
+                        message.className = "style4";
+                    }
+    
+                    body.appendChild(message);
+                }
+            }
+    
+            document.getElementById("bouton").addEventListener("click", bonjour);
+
+        </script>
+
+    </body>
+    </html>

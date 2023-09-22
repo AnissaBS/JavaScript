@@ -4,25 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <style>
+        .classPara{
+            color:rgb(0, 110, 255) ;
+        }
+
+        #idPara{
+            background-color: rgb(134, 178, 126);
+        }
+    </style>
+
 </head>
 <body>
     <div></div>
-    <h1></h1>
+    <h1 id="jj"></h1>
     <div class="cc"></div>
 
     <script>
-        //J'utilise querySelector pour cibler une div
+        // J'utilise querySelector pour cibler une div
         document.querySelector('div').innerHTML="Hello les DWWM";
-
-        //querySelector cible h1
+ 
+        // querySelector cible h1
         document.querySelector('h1').innerText="CoucouuUuuu guys !"
 
-        //querySlector cible un id
+        // querySlector cible un id
         document.querySelector('#jj').innerHTML="Vamos chicos :)";
 
-        //querySelector cible une classe
+        // querySelector cible une classe
         document.querySelector('.cc').innerHTML="Ici c'est l'AFPA";
+
+        // Créer un nouvel élément sur la page
+        const para = document.createElement("p");
+        para.innerText = "Have a good week end bro !";
+
+        document.body.appendChild(para); //pour ajouter un nœud (généralement un élément HTML) à un autre nœud existant, en le plaçant à la fin de la liste des enfants du nœud parent spécifié : parentElement.appendChild(childElement);
+
+        para.className="classPara";
+
+        para.id="idPara";
+
     </script>
-    
+
 </body>
 </html>
