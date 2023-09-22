@@ -6,50 +6,23 @@
     <title>Document</title>
 </head>
 <body>
+    <div></div>
+    <h1></h1>
+    <div class="cc"></div>
 
     <script>
+        //J'utilise querySelector pour cibler une div
+        document.querySelector('div').innerHTML="Hello les DWWM";
 
-        let taille = Number (prompt("Entrez votre taille (ex : 1.75) : "));
-        document.write("Votre taille : "  + taille);
+        //querySelector cible h1
+        document.querySelector('h1').innerText="CoucouuUuuu guys !"
 
-        let poids = Number (prompt("Entrez votre poids : "));
-        document.write(" Votre poids : "  + poids);
+        //querySlector cible un id
+        document.querySelector('#jj').innerHTML="Vamos chicos :)";
 
-        let imc = (poids/(taille*taille));
-        console.log(imc);
-        document.write(" Voici votre IMC : " + imc);
-
-        // var resultat = document.body;
-
-        if (imc < 18.5){
-            // resultat.innerHTML += '<span style="color: red;">Votre IMC est : ' + imc.toFixed(2) + ' €</span>';
-            document.write(" Vous êtes considéré comme étant en Sous-poids.");
-        }
-        else if (imc >= 18.5 && imc <= 24.9){
-            // resultat += '<span style="color: green;">Le prix TTC est : ' + imc.toFixed(2) + ' €</span>';
-            document.write(" Vous êtes considéré comme ayant un poids Normal.");
-        }
-        else if (imc >= 25 && imc <= 29.9){
-            // resultat += '<span style="color: green;">Le prix TTC est : ' + imc.toFixed(2) + ' €</span>';
-            document.write(" Vous êtes considéré comme étant en Surpoids.");
-        }
-        else if (imc >= 30 && imc <= 34.9){
-            // resultat += '<span style="color: green;">Le prix TTC est : ' + imc.toFixed(2) + ' €</span>';
-            document.write(" Vous êtes considéré comme étant en Obésite de stade 1.");
-        }
-        else if (imc >= 35 && imc <= 39.9){
-            // resultat += '<span style="color: green;">Le prix TTC est : ' + imc.toFixed(2) + ' €</span>';
-            document.write(" Vous êtes considéré comme étant en Obésite de stade 2.");
-        }
-        else if (imc >= 40){
-            // resultat += '<span style="color: green;">Le prix TTC est : ' + imc.toFixed(2) + ' €</span>';
-            document.write(" Vous êtes considéré comme étant en Obésite de stade 3 (obésité sévère).");
-        }
-
+        //querySelector cible une classe
+        document.querySelector('.cc').innerHTML="Ici c'est l'AFPA";
     </script>
-
-<!-- "&&" : pour ajouter une condition qui doit elle aussi être forcément vraie
-     "||" : pour ajouter une condition qui peut être vraie, soit l'une soit l'autre -->
-
+    
 </body>
 </html>
