@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 <body>
+
+    <button onclick="plus()">Augmenter</button>
+    <button onclick="moins()">Réduire</button>
+    <img id="cible" src="cercle.png">
+
+    <script>
     
-
-<script>
+        function plus(){
+            document.getElementById("cible").width += 50;
+            document.getElementById("cible").height += 50;
+        }
     
-
-</script>
-
+        function moins(){
+            document.getElementById("cible").width -= 50;
+            document.getElementById("cible").height -= 50;
+        }
+    
+    </script>
 
 </body>
 </html>
