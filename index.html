@@ -3,27 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    
-    <script>
 
-    function afficher() {
-        let nombre = 20;
-        while (nombre >= 0){
-            document.write(nombre);  // Afficher le nombre (ici 20)
-            
-            // if (nombre == 0) { // Si ce n'est pas le dernier nombre,....
-            //     document.write('-');  // ....afficher un tiret
-            // }
-            
-            nombre -= 2;  // Décrémenter le nombre de 2
-        }
-    }
-    afficher();
-
-    </script>
+    <nav id="nav">
+        <h3>Afpa DWWM</h3>
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Présentation</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div id="icons"></div>
+    </nav>
+    <script src="script.js"></script>
 
 </body>
 </html>

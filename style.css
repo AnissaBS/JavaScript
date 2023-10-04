@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Enlver les puces de la liste */
+li{
+    list-style: none;
+}
+
+a, a:visited{                   /* Prend en compte les a "normal" et les a lorsqu'ils seront visités */
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover{
+    color: white;             /* La couleur du a deviendra blanche lorsqu'il sera survolé */
+}
+
+/* Style navar */
+nav{
+    background: skyblue;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-style: italic;
+}
+
+nav ul{
+    display: flex;              /* Disposer les ul en ligne */
+    justify-content: flex-end;
+    gap: 15px;                  /* Sert à créer un espacement entre les items (enfants) */
+}
+
+#icons{
+    cursor: pointer;            /* Donne une force aprtciulière au pointeur */
+    display: none;
+}
+
+@media screen and (max-width: 650px){
+    #icons{
+        display: block;
+    }
+    #icons:before{
+        content: "\2630";
+    }
+
+/* Faire disparaître les ul */
+    nav ul{
+        position: fixed;
+        left: -100%;
+        top: 5%;
+        flex-direction: column;
+        background-color: skyblue;
+        width: 100%;
+        text-align: center;
+        transition: .2s;
+    }
+
+    nav li{
+        padding: 3px 0;
+    }
+
+    nav li:hover{
+        background: fixed;
+    }
+
+    nav.active ul{
+        left: 0;
+    }
+}
